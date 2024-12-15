@@ -35,249 +35,7 @@
       font-size: 1.25rem;
       margin-bottom: 0;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    }```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Museum Exhibit Experience</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f9fa;
-      color: #212529;
     }
-
-    .hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://example.com/image.jpg') no-repeat center center;
-      background-size: cover;
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
-      border-bottom: 5px solid #007bff;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 15px;
-      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-      font-weight: bold;
-    }
-
-    .hero p {
-      font-size: 1.25rem;
-      margin-bottom: 0;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    }
-
-    .btn-report {
-      background-color: #007bff;
-      color: white;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      padding: 10px 20px;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-
-    .btn-report:hover {
-      background-color: #0056b3;
-      transform: translateY(-2px);
-    }
-
-    .btn-feedback {
-      background-color: #dc3545;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn-feedback:hover {
-      background-color: #a71d2a;
-    }
-
-    .card {
-      border: 1px solid #e9ecef;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      overflow: hidden;
-      background-color: #ffffff;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .card-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #495057;
-    }
-
-    footer {
-      background-color: #212529;
-      color: #adb5bd;
-      padding: 20px 0;
-      text-align: center;
-      border-top: 5px solid #007bff;
-    }
-
-    footer p {
-      margin: 0;
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero p {
-        font-size: 1.1rem;
-      }
-
-      .card-title {
-        font-size: 1.25rem;
-      }
-    }
-
-    .hidden-section {
-      display: none;
-    }
-
-    .profile-section {
-      padding: 20px;
-      border: 1px solid #e9ecef;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      background-color: #ffffff;
-    }
-
-    .profile-picture {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-    }
-
-    .form-control {
-      margin-bottom: 10px;
-    }
-
-    .exhibit-section {
-      padding: 20px;
-      border: 1px solid #e9ecef;
-      border-radius: 10px;
-      background-color: #ffffff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-    }
-
-    .exhibit-section h4 {
-      font-weight: bold;
-    }
-
-    .exhibit-section p {
-      margin-bottom: 10px;
-    }
-
-    .artifact-details {
-      padding: 20px;
-      border: 1px solid #e9ecef;
-      border-radius: 10px;
-      background-color: #ffffff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin-top: 20px;
-    }
-
-    .artifact-details img {
-      max-width: 100%;
-      border-radius: 10px;
-    }
-  </style>
-</head>
-
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Museum</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="visitorMenu" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Visitor Dashboard
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="visitorMenu">
-              <li><a class="dropdown-item" href="#" onclick="showSection('history')">Report History</a></li>
-              <li><a class="dropdown-item" href="#" onclick="showSection('status')">Report Status</a></li>
-              <li><a class="dropdown-item" href="#" onclick="showSection('halloffame')">Hall of Fame</a></li>
-              <li><a class="dropdown-item" href="#" onclick="showSection('profile')">Profile</a></li>
-              <li><a class="dropdown-item" href="#" onclick="showSection('exhibits')">Exhibit Data</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="hero">
-    <h1>Welcome to the Museum</h1>
-    <p>Step into a world of discovery, where every exhibit tells a story and every corner sparks curiosity!</p>
-  </div>
-
-  <div class="container mt-5">
-    <div id="profile" class="hidden-section">
-      <div class="profile-section">
-        <h3>Visitor Profile</h3>
-        <form id="profileForm">
-          <div class="mb-3">
-            <label for="profilePicture" class="form-label">Profile Picture</label>
-            <input type="file" class="form-control" id="profilePicture" accept="image/*">
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email Address</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email">
-          </div>
-          <div class="mb-3">
-            <label for="phone" class="form-label">Phone Number</label>
-            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
-          </div>
-          <button type="submit" class="btn btn-primary">Save Profile</button>
-        </form>
-      </div>
-    </div>
-
-    <div id="exhibits" class="hidden-section">
-      <div class="exhibit-section">
-        <h4><a href="#" onclick="showArtifactDetails('artifact1')">Exhibit 1: Ancient Artifacts</a></h4>
-        <p>Description: A collection of artifacts from ancient civilizations, showcasing their culture and daily life.</p>
-        <p>Location: Hall A</p>
-      </div>
-      <div class="exhibit-section">
-        <h4><a href="#" onclick="showArtifactDetails('artifact2')">Exhibit 2: Modern Art</a></h4>
-        <p>Description: Explore contemporary art pieces from renowned artists worldwide.</p>
-        <p>Location: Hall B</p>
-      </div>
-      <div class="exhibit-section">
-        <h4><a href="#" onclick="showArtifactDetails('artifact3')">Exhibit 3: Space Exploration</a></h4>
-        <p>Description: Learn about humanity's journey to the stars through interactive displays and models.</p>
-        <p>Location: Hall C</p>
-      </div>
-      <div class="exhibit-section">
-        <
 
     .btn-report {
       background-color: #007bff;
@@ -609,7 +367,63 @@
       <div id="halloffame" class="hidden-section">
         <h3>Hall of Fame</h3>
         <ul id="halloffame-list">
-            <!-- Hall of Fame will be dynamically loaded here -->
+          <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>1</th>
+                    <th>Manjeet Singh</th>
+                    <th>Light Issue</th>
+                    <th>15-12-24</th>
+                </tr>
+            </thead>
+
+            <thead>
+              <tr>
+                  <th>2</th>
+                  <th>Pragnesh</th>
+                  <th>Crack in Terracotta</th>
+                  <th>15-12-24</th>
+              </tr>
+          </thead>
+
+          <thead>
+            <tr>
+                <th>3</th>
+                <th>Bala</th>
+                <th>Lighting Issue</th>
+                <th>10-12-24</th>
+            </tr>
+        </thead>
+
+        <thead>
+          <tr>
+              <th>4</th>
+              <th>Abhay panshala</th>
+              <th>Dinosaur Exihibit</th>
+              <th>09-12-24</th>
+          </tr>
+      </thead>
+
+      <thead>
+        <tr>
+            <th>5</th>
+            <th>Vishva Patel</th>
+            <th>Solar System Model</th>
+            <th>05-12-24</th>
+        </tr>
+    </thead>
+
+    <thead>
+      <tr>
+          <th>6</th>
+          <th>Suhani Bhatt</th>
+          <th>Information Panel Broken</th>
+          <th>01-12-24</th>
+      </tr>
+  </thead>
+
+
+            <tbody>
         </ul>
     </div>
 </div>
